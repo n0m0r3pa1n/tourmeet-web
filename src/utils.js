@@ -1,3 +1,7 @@
+import moment from "moment";
+
+moment().locale("bg")
+
 String.prototype.trunc =
     function (n, useWordBoundary) {
         if (this.length <= n) {
@@ -8,3 +12,7 @@ String.prototype.trunc =
             ? subString.substr(0, subString.lastIndexOf(' '))
             : subString) + "...";
     };
+
+export function formatToDisplayDate(dateString) {
+    return moment(dateString).format("dddd, Do MMMM YYYY")
+}
