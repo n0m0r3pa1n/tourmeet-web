@@ -5,7 +5,7 @@ export const fetchMeetings = createAsyncThunk(
     'meetings/fetchMeetings',
     async (thunkAPI) => {
         const response = await meetingsApi.getMeetings();
-        return response.data
+        return response
     }
 );
 
@@ -15,7 +15,7 @@ export const meetingsSlice = createSlice({
         value: [],
     },
     extraReducers: {
-        [fetchMeetings.rejected]: (sate, action) => {
+        [fetchMeetings.rejected]: (state, action) => {
             console.log(action)
         },
         [fetchMeetings.fulfilled]: (state, action) => {

@@ -6,15 +6,16 @@ import store from './app/store';
 import {Provider} from 'react-redux';
 import * as serviceWorker from './serviceWorker';
 
-import {Route, Router, Switch} from 'react-router';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import {syncHistoryWithStore} from 'react-router-redux';
 import {createBrowserHistory} from 'history'
 
-import Details from "./features/details/Details";
+import {DetailsComponent} from "./features/details/Details";
 import {MeetingsComponent} from "./features/meetings/Meetings";
 
 import {ThemeProvider} from '@material-ui/core/styles';
 import {theme} from "./theme/theme";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const history = syncHistoryWithStore(createBrowserHistory(), store);
 
@@ -28,7 +29,7 @@ ReactDOM.render(
                     <App/>
                     <Switch>
                         <Route exact path="/" component={MeetingsComponent}/>
-                        <Route exact path="/:id/details" component={Details}/>
+                        <Route exact path="/:id/details" component={DetailsComponent}/>
                     </Switch>
                 </Router>
             </Provider>

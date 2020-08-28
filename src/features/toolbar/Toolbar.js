@@ -17,6 +17,17 @@ export default class TopToolbar extends Component {
                               }}>
                             Хайде на разходка
                         </Link>
+
+                        <Link
+                            style={{
+                                color: "rgb(255, 255, 255)",
+                                fontSize: "18px",
+                                marginLeft: "60px",
+                                textDecoration: "none"
+                            }}
+                            to={"/all"}>
+                            Срещи
+                        </Link>
                     </Toolbar>
                 </AppBar>
             </div>
