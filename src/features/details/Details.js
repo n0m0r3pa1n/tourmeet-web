@@ -35,7 +35,7 @@ export const DetailsComponent = (props) => {
                 <Typography style={{marginLeft: "20px"}} gutterBottom variant="body1" component={'div'}>
                     {dates}
                 </Typography>
-                <div style={{backgroundColor: "rgba(0, 0, 0, 0.89)", marginTop: "10px"}}>
+                <div style={{backgroundColor: "rgba(0, 0, 0, 0.89)", marginTop: "10px", paddingTop: "10px"}}>
                     <ImageGallery style={{height: "100px"}} items={images} showPlayButton={false}/>
                 </div>
                 <div>

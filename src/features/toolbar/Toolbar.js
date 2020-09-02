@@ -25,8 +25,8 @@ export default class TopToolbar extends Component {
                                 marginLeft: "60px",
                                 textDecoration: "none"
                             }}
-                            to={"/all"}>
-                            Срещи
+                            to={"/"}>
+                            Разходки с водачи
                         </Link>
                     </Toolbar>
                 </AppBar>

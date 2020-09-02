@@ -17,7 +17,7 @@ export const MeetingsComponent = () => {
         <Meeting key={meeting.id} meeting={meeting}/>
     );
 
-    return <Paper style={ListItemsStyle}>
+    return <Paper className="d-flex justify-content-center pull-center" style={ListItemsStyle}>
         {listItems}
     </Paper>
 };

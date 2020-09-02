@@ -15,8 +15,7 @@ const ReactMarkdown = require('react-markdown');
 const style = {
     marginTop: '10px',
     marginLeft: '30px',
-    marginRight: '30px',
-    width: '30%',
+    marginRight: '30px'
 };
 
 class Meeting extends Component {
@@ -36,7 +35,7 @@ class Meeting extends Component {
         const dates = meeting.dates.map(date => <div key={date}>{formatToDisplayDate(date)}</div>)
 
         return (
-            <Card style={style}>
+            <Card className="col-md-3" style={style} elevation={2}>
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
                         {meeting.title}
